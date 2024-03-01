@@ -1,0 +1,272 @@
+/*Geral */
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #FFEBFC;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    border: solid 1px #ffb1b1;
+    border-radius: 8px;
+}
+h2.titulo {
+    color: white;
+    font-size: 42px;
+    text-align: center;
+}
+h2.titulo span {
+    color: #ffffff;
+    font-size: 42px;
+}
+
+/* Cabeçalho */
+header {
+    padding: 40px;
+}
+
+/* abaixo significa somente .interface que estiver em header */
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+header nav ul {
+    list-style-type: none;
+}
+header nav ul li{
+    font-size: 35px;
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header a:hover {
+    color: #9e0e64;
+    transform: scale(1.5);
+}
+
+
+/* Estilo do sobre */
+section.sobre {
+    padding: 40px 4% ;
+}
+
+section.sobre .flex {
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 160px;
+}
+
+.sobre h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+.sobre p{
+    font-size: 45px;
+    padding-left: 15px;
+}
+.btn-servicos {
+    padding-left: 60px;
+    padding-top: 30px;
+}
+
+.btn-servicos button{
+    padding: 10px 40px;
+    font-size:25px;
+    font-weight: 400;
+    background-color: #62093F;
+    cursor: pointer;
+    border: 0;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0px 0px 8px #ffffff;
+}
+.btn-servicos button:hover {
+    transform: scale(1.1);
+    transition: .2s;
+}
+.img-sobre{
+width: auto;
+}
+
+
+/* Servicos  */
+section.servicos {
+    background-color: #62093F;
+    padding: 40px 4%;
+    color: white;
+    width: 100%;
+    padding-top: 100px;
+}
+.servicos .servicos-box{
+    color: white;
+    padding: 20px;
+}
+.servicos .servicos-box h3{
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.servicos .interface {
+   display: flex;
+   align-items: center;
+}
+.servicos h2{
+    font-size: 42px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.servicos .servicos-box img{
+    border-radius: 3px;
+}
+.servicos .servicos-box img:hover{
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+/* footer */
+.contato {
+    height: 20vh;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-left: 255px;
+}
+
+.btn-contato button {
+    background-color:#9e0e64;
+    border-radius:25px;
+    padding: 15px;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+}
+.btn-contato a{
+    text-decoration: none;
+}
+.servicos .contato .btn-contato a :hover{
+    transform:scale(1.2);
+    transition: 0.2s;
+}
+
+/* footer */
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 10px 4px rgb(0, 0, 0);
+    background-color: #ffb1b1;
+}
+footer .logo-footer .texto-logo h4{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 400;
+}
+footer .flex{
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+}
+.btn-social {
+    align-items: center;
+    text-align: center;
+    
+}
+.btn-social button{
+    border: none;
+    background: none;
+    padding: 5px;
+    
+}
+.btn-social span{
+    font-weight: 400;
+    font-size: 35px;
+}
+
+.btn-social button :hover{
+    transform: scale(1.2);
+    transition: .3s;
+}
+
+@media screen and (max-width: 1325px){
+    header .interface {
+        display: flex;
+        justify-content: space-around;
+    }
+    .menu {
+        display: none;
+    }
+    section .img-sobre{
+        display: none;
+    }
+    
+    section .flex {
+        background-image: url(assets/maquina.png);
+        background-size: 400px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .btn-servicos button{
+        font-size: 20px;
+        padding: 10px; 
+
+    }
+    section.sobre {
+        padding-top: 0px;
+        
+    }
+        
+    section.sobre p{
+        font-size: 25px;
+    }
+
+
+    section.servicos .flex {
+        flex-direction: column;
+        background-image: none;
+        
+    }
+    .servicos .interface{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+    }
+    h2 {
+        padding-bottom: 10px;
+    }
+    .servicos {
+        background-image: none;
+        display: flex;
+        flex-direction: column;
+    }
+    .contato {
+        height: auto;
+        padding-left: 0px;
+    }
+    .contato .btn-contato {
+        padding-top: 25px;
+    }
+}
